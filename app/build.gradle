@@ -1,6 +1,14 @@
 apply plugin: 'com.android.application'
 
 android {
+    signingConfigs {
+        signingConfig {
+            storeFile file('/Users/eugenewong/Documents/frontend/android-azure-appcenter-test/keystore')
+            storePassword '1234567890ab@keystore'
+            keyPassword '1234567890ab@keystore'
+            keyAlias = 'key0'
+        }
+    }
     compileSdkVersion 29
     buildToolsVersion "29.0.2"
     defaultConfig {
