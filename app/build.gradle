@@ -12,14 +12,15 @@ android {
     compileSdkVersion 29
     buildToolsVersion "29.0.2"
     defaultConfig {
-        applicationId "ms.appcenter.sampleapp.android"
+        applicationId "ms.appcenter.sampleapp.a"
         minSdkVersion 16
         targetSdkVersion 29
-        versionCode 1
-        versionName "1.0"
+        versionCode 2
+        versionName "1.1"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         // Obtain the value of APPCENTER_APP_SECRET environment variable from Build time.
         buildConfigField("String", "APPCENTER_APP_SECRET", "\"3bc54ae9-f1be-4052-b0e2-e7744660048e\"")
+        signingConfig signingConfigs.debug
         if (System.getenv("APPCENTER_APP_SECRET") != null) {
             buildConfigField("String", "APPCENTER_APP_SECRET", "\"${System.getenv("APPCENTER_APP_SECRET")}\"")
         }
