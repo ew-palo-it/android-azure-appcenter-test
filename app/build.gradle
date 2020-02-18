@@ -15,8 +15,8 @@ android {
         applicationId "ms.appcenter.sampleapp.a"
         minSdkVersion 16
         targetSdkVersion 29
-        versionCode 2
-        versionName "1.1"
+        versionCode 3
+        versionName "1.2"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         // Obtain the value of APPCENTER_APP_SECRET environment variable from Build time.
         buildConfigField("String", "APPCENTER_APP_SECRET", "\"3bc54ae9-f1be-4052-b0e2-e7744660048e\"")

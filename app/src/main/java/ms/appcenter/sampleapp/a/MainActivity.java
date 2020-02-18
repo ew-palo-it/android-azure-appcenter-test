@@ -1,4 +1,4 @@
-package ms.appcenter.sampleapp.android;
+package ms.appcenter.sampleapp.a;
 
 import android.os.Bundle;
 import android.util.Log;
@@ -10,6 +10,8 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentPagerAdapter;
 import androidx.viewpager.widget.ViewPager;
+import ms.appcenter.sampleapp.android.BuildConfig;
+import ms.appcenter.sampleapp.android.R;
 
 import com.microsoft.appcenter.AppCenter;
 import com.microsoft.appcenter.analytics.Analytics;
@@ -80,7 +82,7 @@ public class MainActivity extends AppCompatActivity {
         @Override
         public CharSequence getPageTitle(@IntRange(from = 0, to = 6) final int position) {
             if (views[position] instanceof WelcomeActivity) {
-                return "Welcome";
+                return "Welcome!";
             } else if (views[position] instanceof BuildActivity) {
                 return "Build";
             } else if (views[position] instanceof TestActivity) {
