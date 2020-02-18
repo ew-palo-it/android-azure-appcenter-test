@@ -1,10 +1,18 @@
 apply plugin: 'com.android.application'
 
 android {
+    signingConfigs {
+        signingConfig {
+            storeFile file('/Users/eugenewong/Documents/frontend/android-azure-appcenter-test/keystore')
+            storePassword '1234567890ab@keystore'
+            keyPassword '1234567890ab@keystore'
+            keyAlias = 'key0'
+        }
+    }
     compileSdkVersion 29
     buildToolsVersion "29.0.2"
     defaultConfig {
-        applicationId "ms.appcenter.sampleapp.android"
+        applicationId "ms.appcenter.sampleapp.a"
         minSdkVersion 16
         targetSdkVersion 29
         versionCode 3
@@ -12,6 +20,7 @@ android {
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         // Obtain the value of APPCENTER_APP_SECRET environment variable from Build time.
         buildConfigField("String", "APPCENTER_APP_SECRET", "\"3bc54ae9-f1be-4052-b0e2-e7744660048e\"")
+        signingConfig signingConfigs.debug
         if (System.getenv("APPCENTER_APP_SECRET") != null) {
             buildConfigField("String", "APPCENTER_APP_SECRET", "\"${System.getenv("APPCENTER_APP_SECRET")}\"")
         }
