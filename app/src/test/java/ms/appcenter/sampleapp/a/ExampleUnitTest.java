@@ -1,4 +1,4 @@
-package ms.appcenter.sampleapp.android;
+package ms.appcenter.sampleapp.a;
 
 import org.junit.Test;
 
